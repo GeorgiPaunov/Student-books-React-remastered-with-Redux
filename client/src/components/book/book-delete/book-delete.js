@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchBookDetailsAction, deleteBookAction } from '../../../actions/book-actions';
-import '../../form.css';
 
 class BookDelete extends Component {
     handleForm = (evt) => {
@@ -100,7 +99,7 @@ class BookDelete extends Component {
                     disabled
                 />
 
-                <button id="delete" type="submit">Delete</button>
+                <button className="btn delete-btn" type="submit">Delete</button>
             </form>
         </div>
         );

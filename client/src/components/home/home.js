@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { toast } from 'react-toastify'; 
 import { addToListAction } from '../../actions/list-actions';
-import './home.css';
 
 import BookAll from '../book/book-all/book-all';
 import ListSelect from '../list/list-select/list-select';

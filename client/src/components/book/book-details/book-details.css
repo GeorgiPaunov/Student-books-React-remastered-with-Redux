@@ -1,84 +1,68 @@
-.content {
-    width: 100%;
-    height: 500px;
-    margin-top: 100px;
-    display: inline-block;
+.details-card {
+    display: flex;
+    justify-content: space-around;
+    max-height: 70vh;
 }
 
-.book-image {
-    display: inline-block;
+.book-picture {
+    flex: 0 0 40%;
+}
+
+.book-picture img {
     height: 100%;
-    width: 42%;
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
-.book-image img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
 
-.book-details {
-    display: inline-block;
-    width: 50%;
-    height: 55%;
-    position: relative;
-    top: -49%;
+.book-info {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 50%;
 }
 
-.book-description {
-    display: inline-block;
-    width: 50%;
-    height: 40%;
-    position: relative;
-    left: 23.3%;
-    top: -44.2%;
+.book-data .data-row {
+    display: flex;
+    border-bottom: 0.12em solid #000;
+    align-items: flex-end;
+    padding-bottom: 0.1em;
+    margin-bottom: 0.5em;
+}
+
+.data-row h3, .data-row h4 {
+    text-align: left;
+}
+
+.data-row h3 {
+    flex: 0 0 30%;
+    text-transform: uppercase;
+    padding-left: 0.3em;
+    font-weight: 100;
+}
+
+.book-info .book-description {
+    margin-top: 0.7em;
     overflow: auto;
-    margin-top: 16px;
-    text-align: justify;
-    padding: 7px;
 }
 
-.description-header {
-    background-color: #f1f1f1;
-    height: 30px;
-    margin-bottom: 20px;
-    text-align: center;
+.book-description .description-header {
+    position: sticky;
+    top: 0;
 }
 
-.description-header h2{
-    font-weight: 100;
-    font-size: 20px;
+.book-description header {
+    background: #f1f1f1;
+    border-radius: 0.3em;
+}
+
+.book-description header h2 {
     text-transform: uppercase;
-}
-
-.content h1, h2, h3, h4 {
-    margin: 0;
-}
-
-.detail-row h2 {
-    position: relative;
-    left: 10%;
-    display: inline-block;
-    width: 30%;
-    text-align: left;
     font-weight: 100;
-    text-transform: uppercase;
-    font-size: 16px;
-    padding-top: 17px;
+    padding: 0.3em 0;
 }
 
-.detail-row h4 {
-    display: inline-block;
-    height: 100%;
-    width: 70%;
-    font-weight: 600;
-    font-size: 15px;
+.book-description .description-main {
+    padding: 0 0.3em;
 }
 
-.detail-row {
-    height: 14%;
+.book-description .description-main p {
     text-align: left;
-    border-bottom: 1px solid rgba(0,0,0, 0.2);
 }

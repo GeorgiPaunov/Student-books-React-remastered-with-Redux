@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchListsAction } from '../../../actions/list-actions';
 
+import './list-select.css';
+
 class ListSelect extends Component {
     constructor(props) {
         super(props);

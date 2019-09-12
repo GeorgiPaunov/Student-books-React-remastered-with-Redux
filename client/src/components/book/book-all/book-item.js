@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './book-item.css';
+
 const BookItem = (props) => {
     const username = sessionStorage.getItem("username");
     const isAdmin = JSON.parse(sessionStorage.getItem("isAdmin"));
@@ -18,33 +20,33 @@ const BookItem = (props) => {
 
     return (
         <li className="book">
-            <h2>{props.title}</h2>
-            <h2>{props.grade}. grade</h2>
-            <img src={props.imageUrl} alt=""/>
-            {
-                username
-                    ? <span>
-                        <div className="inner">
-                            <button onClick={() => getDetails(props._id)}>Details</button>
-                        </div>
-                        <div className="inner">
-                            <button onClick={() => props.addToList(props._id)}>Add</button>
-                        </div>
-                      </span>
-                    : null
-            }
-            {
-                isAdmin
-                    ? <span>
-                         <div className="inner">
-                            <button id="edit" onClick={() => getEdit(props._id)}>Edit</button>
-                        </div>
-                        <div className="inner">
-                            <button id="delete" onClick={() => getDelete(props._id)}>Delete</button>
-                        </div>
-                      </span>
-                    : null
-            }
+            <article className="book-card">
+                <header className="card-header">
+                    <h3>{props.title}</h3>
+                    <h3>{props.grade}. grade</h3>
+                </header>
+                <section className="card-picture">
+                    <img src={props.imageUrl} alt="book"/>
+                </section>
+                <footer className="card-footer">
+                    {
+                        username
+                            ? <span className="buttons">
+                                <button className="btn standart-btn" onClick={() => getDetails(props._id)}>Details</button>
+                                <button className="btn standart-btn" onClick={() => props.addToList(props._id)}>Add</button>
+                              </span>
+                            : null
+                    }
+                    {
+                        isAdmin
+                            ? <span className="buttons">
+                                <button className="btn edit-btn" onClick={() => getEdit(props._id)}>Edit</button>
+                                <button className="btn delete-btn" onClick={() => getDelete(props._id)}>Delete</button>
+                              </span>
+                            : null
+                    }
+                </footer>
+            </article>
         </li>
     );
 }

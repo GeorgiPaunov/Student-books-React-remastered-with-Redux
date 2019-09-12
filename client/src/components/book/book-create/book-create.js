@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createBookAction } from '../../../actions/book-actions'
-import '../../form.css';
 
 class BookCreate extends Component {
     constructor(props) {
@@ -119,7 +118,7 @@ class BookCreate extends Component {
                         onChange={this.handleChange} 
                     />
 
-                    <button type="submit">Create</button>
+                    <button className="btn standart-btn" type="submit">Create</button>
                 </form>
             </div>
         );

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../form.css';
 
 class Login extends Component {
     constructor (props) {
@@ -51,7 +50,7 @@ class Login extends Component {
                         onChange={this.handleChange}
                     />
 
-                    <button type="submit">Login</button>
+                    <button className="btn standart-btn" type="submit">Login</button>
                 </form>
             </div>
         );

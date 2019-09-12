@@ -1,0 +1,32 @@
+.list-table {
+    margin: 0 auto;
+}
+
+.list-table,
+.list-table th,
+.list-table td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+.list-table th, td {
+    padding: 0.3em;
+}
+
+.list-table th {
+    color: #FFF;
+    background-color: #000;
+    font-size: 1.2em;
+}
+
+.list-table td:not(:last-child) {
+    text-align: left;
+}
+
+.list-table tr:nth-child(even) {
+    background-color: #DDD;
+}
+
+.list-table tr:nth-child(odd) {
+    background-color: #FFF;
+}

@@ -11,24 +11,55 @@ class BookDetails extends Component {
 
         const { book } = this.props;
 
+        if (!book.price) {
+            return null;
+        }
+
         return(
-            <div className="content">
-                <div className="book-image">
+            <div className="details-card">
+                <section className="book-picture">
                     <img src={book.imageUrl} alt="book"/>
-                </div>
-                <div className="book-details">
-                    <div className="detail-row"><h2>Title</h2><h4>{book.title}</h4></div>
-                    <div className="detail-row"><h2>grade</h2><h4>{book.grade}</h4></div>
-                    <div className="detail-row"><h2>Author</h2><h4>{book.author}</h4></div>
-                    <div className="detail-row"><h2>Subject</h2><h4>{book.subject}</h4></div>
-                    <div className="detail-row"><h2>year</h2><h4>{book.year}</h4></div>
-                    <div className="detail-row"><h2>publisher</h2><h4>{book.publisher}</h4></div>
-                    <div className="detail-row"><h2>Price</h2><h4>{book.price.toFixed(2)} lv.</h4></div>
-                </div>
-                <div className="book-description">
-                    <div className="description-header"><h2>Description</h2></div>
-                    {book.description}
-                </div>
+                </section>
+                <section className="book-info">
+                    <section className="book-data">
+                        <div className="data-row">
+                            <h3>title</h3>
+                            <h4>{book.title}</h4>
+                        </div>
+                        <div className="data-row">
+                            <h3>grade</h3>
+                            <h4>{book.grade}</h4>
+                        </div>
+                        <div className="data-row">
+                            <h3>author</h3>
+                            <h4>{book.author}</h4>
+                        </div>
+                        <div className="data-row">
+                            <h3>subject</h3>
+                            <h4>{book.subject}</h4>
+                        </div>
+                        <div className="data-row">
+                            <h3>year</h3>
+                            <h4>{book.year}</h4>
+                        </div>
+                        <div className="data-row">
+                            <h3>publisher</h3>
+                            <h4>{book.publisher}</h4>
+                        </div>
+                        <div className="data-row">
+                            <h3>price</h3>
+                            <h4>{book.price.toFixed(2)} lv.</h4>
+                        </div>
+                    </section>
+                    <section className="book-description">
+                        <header className="description-header">
+                            <h2>description</h2>
+                        </header>
+                        <main className="description-main">
+                            <p>{book.description}</p>
+                        </main>
+                    </section>
+                </section>
             </div>
         );
     }

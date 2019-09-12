@@ -1,37 +1,35 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './navbar.css';
 
 const NavBar = (props) => {
     return (
-        <header>
-            <Link to="/">Home</Link>
-            <div className="header-right">
-                {
-                    props.username
-                        ?
-                        (<span>
-                            {
-                                props.isAdmin
-                                    ?
-                                    (<span>
-                                        <Link to="/books/create">Create book</Link>
-                                    </span>)
-                                    : null
-                            }
-                            <Link to="/lists/myLists">{props.username}'s lists</Link>
-                            <Link to="/lists/create">Create list</Link>
-                            <Link to="#" onClick={props.logout}>Logout</Link>
-                        </span>)
-                        :
-                        (<span>
-                            <Link to="/users/register">Register</Link>
-                            <Link to="/users/login">Login</Link>
-                        </span>)
+        <nav>
+            <ul>
+                {props.username
+                    ?
+                    (<span>
+                        {props.isAdmin
+                            ?
+                            (<li>
+                                <NavLink to="/books/create" activeClassName="selected">Create book</NavLink>
+                            </li>)
+                            : 
+                            null
+                        }
+                        <li><NavLink to="/lists/myLists" activeClassName="selected">{props.username}'s lists</NavLink></li>
+                        <li><NavLink to="/lists/create" activeClassName="selected">Create list</NavLink></li>
+                        <li><NavLink to="#" onClick={props.logout}>Logout</NavLink></li>
+                    </span>)
+                    :
+                    (<span>
+                        <li><NavLink to="/users/register" activeClassName="selected">Register</NavLink></li>
+                        <li><NavLink to="/users/login" activeClassName="selected">Login</NavLink></li>
+                    </span>)
                 }
-            </div>
-        </header>
+            </ul>
+        </nav>
     );
 };
 

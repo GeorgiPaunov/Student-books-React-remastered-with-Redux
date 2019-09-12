@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { toast } from 'react-toastify';
 import ListService from '../../../services/list-service';
-import '../../form.css';
 
 class ListCreate extends Component {
     constructor(props) {
@@ -57,7 +56,7 @@ class ListCreate extends Component {
                         onChange={this.handleChange}
                     />
 
-                    <button type={"submit"}>Create</button>
+                    <button className="btn standart-btn" type={"submit"}>Create</button>
                 </form>
             </div>
         );

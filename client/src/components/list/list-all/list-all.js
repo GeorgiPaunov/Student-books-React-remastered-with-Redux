@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchListsAction, deleteListAction } from '../../../actions/list-actions';
-import './list-all.css';
 
 import ListTable from './list-table';
 

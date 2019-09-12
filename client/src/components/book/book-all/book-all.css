@@ -1,0 +1,18 @@
+ul.books {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+ul.books:before,
+ul.books:after {
+    display: block;
+    content: '';
+    order:1000;
+}
+
+ul.books:before,
+ul.books:after,
+li.book {
+    flex: 0 0 24%;
+}

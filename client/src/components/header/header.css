@@ -1,0 +1,19 @@
+.site-header {
+    background: #f1f1f1;
+    color: #000;
+    overflow: hidden;
+    border-radius: 0.5em;
+    display: flex;
+    margin-bottom: 1.5em;
+}
+
+.site-header .site-title {
+    font-size: 3em;
+    padding: 0 0.5em;
+}
+
+.site-header a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
