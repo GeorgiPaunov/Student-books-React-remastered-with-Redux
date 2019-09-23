@@ -7,6 +7,16 @@ button.btn {
     cursor: pointer;
 }
 
+button.btn:focus,
+button.btn:hover {
+    background: transparent;
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
 button.standart-btn {
     border: 2px solid dodgerblue;
     background: dodgerblue;
@@ -15,8 +25,6 @@ button.standart-btn {
 button.standart-btn:focus,
 button.standart-btn:hover {
     color: dodgerblue;
-    background: transparent;
-    outline: none;
 }
 
 button.delete-btn {
@@ -27,8 +35,6 @@ button.delete-btn {
 button.delete-btn:focus,
 button.delete-btn:hover {
     color: red;
-    background: transparent;
-    outline: none;
 }
 
 button.edit-btn {
@@ -39,10 +45,4 @@ button.edit-btn {
 button.edit-btn:focus,
 button.edit-btn:hover {
     color: orange;
-    background: transparent;
-    outline: none;
-}
-
-button::-moz-focus-inner {
-    border: 0;
 }
